@@ -1,30 +1,51 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import NavPage from "../components/NavPage.vue";
+import HeroPage from "../components/HeroPage.vue";
+import InputPage from "../components/InputPage.vue";
+import ServicePage from "../components/ServicePage.vue";
+import BoostPage from "../components/BoostPage.vue";
+import FooterPage from "../components/FooterPage.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: HomeView,
-  },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
+    {
+        path: "/src/components/NavPage.vue",
+        name: "NavPage",
+        components: NavPage,
+    },
+    {
+        path: "/src/components/HeroPage.vue",
+        name: "HeroPage",
+        components: HeroPage,
+    },
+    {
+        path: "/src/components/InputPage.vue",
+        name: "InputPage",
+        components: InputPage,
+    },
+    {
+        path: "/src/components/ServicePage.vue",
+        name: "ServicePage",
+        components: ServicePage,
+    },
+    {
+        path: "/src/components/BoostPage.vue",
+        name: "BoostPage",
+        components: BoostPage,
+    },
+    {
+        path: "/src/components/FooterPage.vue",
+        name: "FooterPage",
+        components: FooterPage,
+    },
 ];
 
 const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes,
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes,
 });
 
 export default router;

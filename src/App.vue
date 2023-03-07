@@ -1,32 +1,45 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
+  <div class="app">
+   <NavPage/> 
+   <HeroPage/>
+   <InputPage/>
+   <ServicePage/>
+   <BoostPage/>
+   <FooterPage/>
   </div>
 </template>
 
+<script>
+import NavPage from "./components/NavPage.vue";
+import HeroPage from "./components/HeroPage.vue";
+import InputPage from "./components/InputPage.vue";
+import ServicePage from "./components/ServicePage.vue";
+import BoostPage from "./components/BoostPage.vue";
+import FooterPage from "./components/FooterPage.vue";
+
+
+export default {
+  name: 'App',
+  components: {
+    NavPage,
+    HeroPage,
+    InputPage,
+    ServicePage,
+    BoostPage,
+    FooterPage,
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+html, body {
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
