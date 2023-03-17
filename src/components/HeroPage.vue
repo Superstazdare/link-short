@@ -72,9 +72,9 @@ h1 {
     .content-image img{
         margin: 0;
         padding: 1rem 2rem;
-        width: 400px;
+        width: 320px;
         margin-top: -50px;
-        margin-left: -150px;
+        margin-left: -140px;
     }
     .content {
         width: 250px;
